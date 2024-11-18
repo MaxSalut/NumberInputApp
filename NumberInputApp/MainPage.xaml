@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NumberInputApp.MainPage"
+             BackgroundColor="#F5F5F5">
+    <ContentPage.Resources>
+        <!-- Стилі для елементів -->
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="20" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+        <Style TargetType="Entry">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="#333333" />
+            <Setter Property="BackgroundColor" Value="#FFFFFF" />
+            <Setter Property="PlaceholderColor" Value="#AAAAAA" />
+            <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+            <Setter Property="HeightRequest" Value="50" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="BackgroundColor" Value="#4CAF50" />
+            <Setter Property="CornerRadius" Value="10" />
+            <Setter Property="Padding" Value="15" />
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="Margin" Value="0,20,0,0" />
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="Введіть ціле число:" />
+        <Entry x:Name="NumberEntry" Placeholder="Введіть число" Keyboard="Numeric" />
+        <Button Text="Показати число" Clicked="OnShowNumberClicked" />
+    </VerticalStackLayout>
+</ContentPage>
